@@ -219,67 +219,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p># hexo框架搭建静态博客</p>
-<p> ## 1.安装node.js</p>
-<p> node -v  #查看node版本</p>
-<p> ## 2.安装npm</p>
-<p> npm -v  #查看npm版本</p>
-<p> ## 3.修改像素源</p>
-<p> ## 4.安装cnpm</p>
-<p> root@tedu:~# npm get registry </p>
+        <h1 id="hexo框架搭建静态博客"><a href="#hexo框架搭建静态博客" class="headerlink" title="hexo框架搭建静态博客"></a>hexo框架搭建静态博客</h1><h2 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h2><p> node -v  #查看node版本</p>
+<h2 id="2-安装npm"><a href="#2-安装npm" class="headerlink" title="2.安装npm"></a>2.安装npm</h2><p> npm -v  #查看npm版本</p>
+<h2 id="3-修改像素源"><a href="#3-修改像素源" class="headerlink" title="3.修改像素源"></a>3.修改像素源</h2><h2 id="4-安装cnpm"><a href="#4-安装cnpm" class="headerlink" title="4.安装cnpm"></a>4.安装cnpm</h2><p> root@tedu:~# npm get registry </p>
 <p> <a target="_blank" rel="noopener" href="https://registry.npmjs.org/">https://registry.npmjs.org/</a></p>
 <p> npm install -g cnpm –registry=<a target="_blank" rel="noopener" href="http://registry.npm.taobao.org/">http://registry.npm.taobao.org</a>  #安装淘宝的cnpm 管理器</p>
 <p> cnpm -v  #查看cnpm版本</p>
-<p> ## 5.软连接：</p>
-<p> sudo ln -s /home/tarena/nodejs/bin/node /usr/local/bin/</p>
+<h2 id="5-软连接："><a href="#5-软连接：" class="headerlink" title="5.软连接："></a>5.软连接：</h2><p> sudo ln -s /home/tarena/nodejs/bin/node /usr/local/bin/</p>
 <p> sudo ln -s /home/tarena/nodejs/bin/npm /usr/local/bin/</p>
 <p> sudo ln -s /home/tarena/nodejs/bin/cnpm /usr/local/bin/cnpm</p>
-<p> ## 6.安装hexo</p>
-<p> cnpm install -g hexo-cli #安装hexo框架</p>
-<p> ## 7.问题解决：</p>
-<p> 问题：hexo安装后，hexo -v验证显示hexo not found</p>
+<h2 id="6-安装hexo"><a href="#6-安装hexo" class="headerlink" title="6.安装hexo"></a>6.安装hexo</h2><p> cnpm install -g hexo-cli #安装hexo框架</p>
+<h2 id="7-问题解决："><a href="#7-问题解决：" class="headerlink" title="7.问题解决："></a>7.问题解决：</h2><p> 问题：hexo安装后，hexo -v验证显示hexo not found</p>
 <p> 把hexo命令链接到/usr/local/bin下即可,例如  </p>
 <p> sudo ln -s /home/tarena/nodejs/lib/node_modules/hexo-cli/bin/hexo /usr/local/bin/</p>
-<p> ## 8.验证hexo安装是否成功：</p>
-<p> hexo -v #查看hexo版本</p>
-<p> ## 9.hexo安装成功后，初始化博客</p>
-<p> mkdir blog  #创建blog目录</p>
+<h2 id="8-验证hexo安装是否成功："><a href="#8-验证hexo安装是否成功：" class="headerlink" title="8.验证hexo安装是否成功："></a>8.验证hexo安装是否成功：</h2><p> hexo -v #查看hexo版本</p>
+<h2 id="9-hexo安装成功后，初始化博客"><a href="#9-hexo安装成功后，初始化博客" class="headerlink" title="9.hexo安装成功后，初始化博客"></a>9.hexo安装成功后，初始化博客</h2><p> mkdir blog  #创建blog目录</p>
 <p> cd blog   #进入blog目录</p>
 <p> hexo init #生成博客 初始化博客</p>
-<p> ## 10.启动</p>
-<p> /home/tarena/blog# hexo s</p>
+<h2 id="10-启动"><a href="#10-启动" class="headerlink" title="10.启动"></a>10.启动</h2><p> /home/tarena/blog# hexo s</p>
 <p> hexo s #启动本地博客服务</p>
-<p> ## 11.浏览器访问<a target="_blank" rel="noopener" href="http://lochost:4000/">http://lochost:4000</a> #本地访问地址</p>
-<p> ## **12.**hexo n “我的第一篇文章” #创建新的文章 </p>
-<p> ———————————–部署到github上——————————————————–</p>
-<p> # 部署到github上</p>
-<p> ## 1.在github中create一个repository:</p>
-<p> hansonwang99.github.io</p>
+<h2 id="11-浏览器访问http-lochost-4000-本地访问地址"><a href="#11-浏览器访问http-lochost-4000-本地访问地址" class="headerlink" title="11.浏览器访问http://lochost:4000 #本地访问地址"></a>11.浏览器访问<a target="_blank" rel="noopener" href="http://lochost:4000/">http://lochost:4000</a> #本地访问地址</h2><h2 id="12-hexo-n-“我的第一篇文章”-创建新的文章"><a href="#12-hexo-n-“我的第一篇文章”-创建新的文章" class="headerlink" title="**12.**hexo n “我的第一篇文章” #创建新的文章"></a>**12.**hexo n “我的第一篇文章” #创建新的文章</h2><p> ———————————–部署到github上——————————————————–</p>
+<h1 id="部署到github上"><a href="#部署到github上" class="headerlink" title="部署到github上"></a>部署到github上</h1><h2 id="1-在github中create一个repository"><a href="#1-在github中create一个repository" class="headerlink" title="1.在github中create一个repository:"></a>1.在github中create一个repository:</h2><p> hansonwang99.github.io</p>
 <p> 用户部署个人博客的github仓库的命名必须与github用户名一致：</p>
 <p> 仓库名为：mimidebug.github.io</p>
-<p> ## 2.github中创建完仓库后，在后台添加一个github的插件</p>
-<p> cnpm install –save hexo-deployer-git</p>
-<p> ## 3.安装完，设置_config.yml</p>
-<p> vi _config.yml</p>
+<h2 id="2-github中创建完仓库后，在后台添加一个github的插件"><a href="#2-github中创建完仓库后，在后台添加一个github的插件" class="headerlink" title="2.github中创建完仓库后，在后台添加一个github的插件"></a>2.github中创建完仓库后，在后台添加一个github的插件</h2><p> cnpm install –save hexo-deployer-git</p>
+<h2 id="3-安装完，设置-config-yml"><a href="#3-安装完，设置-config-yml" class="headerlink" title="3.安装完，设置_config.yml"></a>3.安装完，设置_config.yml</h2><p> vi _config.yml</p>
 <p>  type: git</p>
 <p>  repo: <a target="_blank" rel="noopener" href="https://github.com/shutman007/mimi.github.io.git">https://github.com/shutman007/mimi.github.io.git</a></p>
 <p>  branch: master</p>
-<p> ## 4.部署到远端</p>
-<p> hexo d</p>
-<p> 把hexo编写的网页部署到GitHub page时遇到这个报错</p>
+<h2 id="4-部署到远端"><a href="#4-部署到远端" class="headerlink" title="4.部署到远端"></a>4.部署到远端</h2><p> 把hexo编写的网页部署到GitHub page时遇到这个报错</p>
 <p> 我的原因是因为我的域名的前面部分跟我的用户名不一致</p>
 <p> 后来我去改了github用户名，更新了_config.yml，再hexo g， hexo d，再打开xxxxx.github.io就可以了</p>
 <p> ——————————————–换主题——————————————</p>
-<p> # 换主题</p>
-<p> ## 1.下载yilia主题包到/home/tarena/blog/themes目录下</p>
-<p> git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
-<p> ## 2.cd themes</p>
-<p> ## 3.vi _config.yml 修改theme: yilia 将主题修改为yilia</p>
-<p> ## 4.hexo c  #清理一下</p>
-<p> ## 5.hexo g  #生成</p>
-<p> ## 6.hexo d  #部署到远程Github仓库</p>
-<p> ## 7.hexo s #启动本地博客服务</p>
-
+<h1 id="换主题"><a href="#换主题" class="headerlink" title="换主题"></a>换主题</h1><h2 id="1-下载yilia主题包到-home-tarena-blog-themes目录下"><a href="#1-下载yilia主题包到-home-tarena-blog-themes目录下" class="headerlink" title="1.下载yilia主题包到/home/tarena/blog/themes目录下"></a>1.下载yilia主题包到/home/tarena/blog/themes目录下</h2><p> git clone <a target="_blank" rel="noopener" href="https://github.com/litten/hexo-theme-yilia.git">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia</p>
+<h2 id="2-cd-themes"><a href="#2-cd-themes" class="headerlink" title="2.cd themes"></a>2.cd themes</h2><h2 id="3-vi-config-yml-修改theme-yilia-将主题修改为yilia"><a href="#3-vi-config-yml-修改theme-yilia-将主题修改为yilia" class="headerlink" title="3.vi _config.yml 修改theme: yilia 将主题修改为yilia"></a>3.vi _config.yml 修改theme: yilia 将主题修改为yilia</h2><h2 id="4-hexo-c-清理一下"><a href="#4-hexo-c-清理一下" class="headerlink" title="4.hexo c  #清理一下"></a>4.hexo c  #清理一下</h2><h2 id="5-hexo-g-生成"><a href="#5-hexo-g-生成" class="headerlink" title="5.hexo g  #生成"></a>5.hexo g  #生成</h2><h2 id="6-hexo-d-部署到远程Github仓库"><a href="#6-hexo-d-部署到远程Github仓库" class="headerlink" title="6.hexo d  #部署到远程Github仓库"></a>6.hexo d  #部署到远程Github仓库</h2><h2 id="7-hexo-s-启动本地博客服务"><a href="#7-hexo-s-启动本地博客服务" class="headerlink" title="7.hexo s #启动本地博客服务"></a>7.hexo s #启动本地博客服务</h2>
       
 
       
