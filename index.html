@@ -276,40 +276,46 @@
 </li>
 <li><p>PRIMARY KEY主键。主键的值不能重复。唯一区分一条数据不重复。</p>
 </li>
-<li><pre><code>eg:
- CREATE TABLE class(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(32) NOT NULL,
-    age INT NOT NULL,
-    sex ENUM(&#39;w&#39;,&#39;m&#39;),
-    score FLOAT DEFAULT 0.0
- );
- create table interest(
-id int primary key auto_increment,
-name varchar(32) not null,
-hobby set(&#39;sing&#39;,&#39;dance&#39;,&#39;draw&#39;),
-price decimal(7,2),
-level char not null,
-comment text
-);
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查看表是如何创建的</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-show create table 表名;
-</code></pre>
+<li><p>创建例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">eg:</span><br><span class="line"> CREATE TABLE class(</span><br><span class="line">	id INT PRIMARY KEY AUTO_INCREMENT,</span><br><span class="line">	name VARCHAR(32) NOT NULL,</span><br><span class="line">	age INT NOT NULL,</span><br><span class="line">	sex ENUM(&#39;w&#39;,&#39;m&#39;),</span><br><span class="line">	score FLOAT DEFAULT 0.0</span><br><span class="line"> );</span><br><span class="line"> create table interest(</span><br><span class="line">id int primary key auto_increment,</span><br><span class="line">name varchar(32) not null,</span><br><span class="line">hobby set(&#39;sing&#39;,&#39;dance&#39;,&#39;draw&#39;),</span><br><span class="line">price decimal(7,2),</span><br><span class="line">level char not null,</span><br><span class="line">comment text</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<p>查看表是如何创建的</p>
 </li>
 </ol>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查询当前数据库中所有表</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>show tables;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">查看表结构</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>desc 表名;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">删除表</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>drop table 表名;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">## 数据基本操作</span><br><span class="line"></span><br><span class="line">1. 插入(insert)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>   insert into 表名 values(,’’,’’);<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 查询(select)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>   select * from 表名 [where 条件];<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. where子句</span><br><span class="line"></span><br><span class="line">   算数运算符</span><br><span class="line"></span><br><span class="line">   比较运算符：&#x3D;  	 !&#x3D;  	 &lt;  	 &gt;  	  &lt;&#x3D; 	   &gt;&#x3D; 	  BETWEEN 	   NOT BETWEEN</span><br><span class="line"></span><br><span class="line">   ​				     IN      NOT IN      LIKE			IS NULL 	 IS NOT NULL	RLIKE(正则表达式)</span><br><span class="line"></span><br><span class="line">   逻辑运算符：NOT或！  	AND 	OR	XOR</span><br><span class="line"></span><br><span class="line">   位运算</span><br><span class="line"></span><br><span class="line">4. 更新表记录(update)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>   update 表名 set 字段1=值1，字段2=值2 … where 条件;<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 删除表记录(delete)</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>   delete from 表名 where 条件;u</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table 表名;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>查询当前数据库中所有表</p>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+<p>查看表结构</p>
+</blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc 表名;</span><br></pre></td></tr></table></figure>
+<p>删除表</p>
+</blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table 表名;</span><br></pre></td></tr></table></figure>
 </blockquote>
 </blockquote>
-<p>   ```</p>
+<h2 id="数据基本操作"><a href="#数据基本操作" class="headerlink" title="数据基本操作"></a>数据基本操作</h2><ol>
+<li><p>插入(insert)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values(,&#39;&#39;,&#39;&#39;);</span><br></pre></td></tr></table></figure></li>
+<li><p>查询(select)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名 [where 条件];</span><br></pre></td></tr></table></figure></li>
+<li><p>where子句</p>
+<p>算数运算符</p>
+<p>比较运算符：=       !=       &lt;       &gt;        &lt;=        &gt;=       BETWEEN        NOT BETWEEN</p>
+<p>​                     IN      NOT IN      LIKE            IS NULL      IS NOT NULL    RLIKE(正则表达式)</p>
+<p>逻辑运算符：NOT或！      AND     OR    XOR</p>
+<p>位运算</p>
+</li>
+<li><p>更新表记录(update)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段1&#x3D;值1，字段2&#x3D;值2 ... where 条件;</span><br></pre></td></tr></table></figure></li>
+<li><p>删除表记录(delete)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete from 表名 where 条件;u</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
 
